@@ -1,0 +1,121 @@
+/* ============================================================
+   ROOT-ME.CSS — Page Root-Me principale
+   ============================================================ */
+@import url('./global.css');
+
+/* === PRÉSENTATION === */
+.presentation .text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === PARCOURS ROOT-ME === */
+.parcours-section {
+  position: relative;
+}
+
+.parcours {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* === CARTES ROOT ME === */
+.card {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  padding: 22px;
+  overflow: hidden;
+  width: 100%;
+  transition: background var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-left: 4px solid;
+}
+
+.card:hover .card-inner {
+  background: var(--bg-card-hover);
+}
+
+.card-inner .title {
+  flex: 0 0 150px;
+  text-align: left;
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+
+.card-inner .text {
+  flex: 1;
+  text-align: left;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.card-inner .text h3 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.card-inner .text p {
+  font-size: 0.9rem;
+}
+
+.card-inner img {
+  width: 250px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+/* Couleurs */
+.card.red .card-inner {
+  border-left-color: var(--accent-red);
+}
+
+.card.blue .card-inner {
+  border-left-color: var(--accent-cyan);
+}
+
+.card.yellow .card-inner {
+  border-left-color: var(--accent-yellow);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .card-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-inner .title,
+  .card-inner .text {
+    text-align: center;
+  }
+
+  .card-inner .text h3 {
+    text-align: center;
+  }
+
+  .card-inner img {
+    width: 100%;
+    max-width: 400px;
+  }
+}

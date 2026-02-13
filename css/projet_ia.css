@@ -1,0 +1,70 @@
+/* ============================================================
+   PROJET_IA.CSS — Page Projet IA
+   ============================================================ */
+@import url('./global.css');
+
+/* === CONTENEUR PRINCIPAL === */
+.projet-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  animation: fadeInUp 0.8s ease forwards;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.projet-container p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.projet-container .intro {
+  text-align: center;
+  color: var(--text-white);
+  font-size: 1.02rem;
+  margin-bottom: 40px;
+}
+
+/* === IMAGES === */
+.projet-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.projet-images img {
+  width: 45%;
+  max-width: 500px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.projet-images img:hover {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .projet-container {
+    padding: 30px 20px;
+    margin: 40px 15px;
+  }
+
+  .projet-images img {
+    width: 90%;
+  }
+}

@@ -1,0 +1,181 @@
+/* ============================================================
+   STYLE.CSS — Page d'Accueil
+   ============================================================ */
+@import url('./global.css');
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* === HERO SECTION === */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+}
+
+/* Lignes flottantes animées */
+main::before,
+main::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 8s ease-in-out infinite;
+}
+
+main::before {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-blue);
+  top: 10%;
+  left: -10%;
+}
+
+main::after {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-red);
+  bottom: 10%;
+  right: -5%;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(20px, -30px);
+  }
+
+  50% {
+    transform: translate(-15px, 20px);
+  }
+
+  75% {
+    transform: translate(25px, 10px);
+  }
+}
+
+/* === TEXTE BIENVENUE === */
+main h2 {
+  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+
+main h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  margin-top: 8px;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: heroName 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 50%, var(--accent-blue) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heroName 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards,
+    gradientShift 4s ease-in-out infinite 1.6s;
+}
+
+@keyframes heroName {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* === SOUS-TITRE === */
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  margin-top: 8px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 1s forwards;
+}
+
+/* === CTA BOUTON === */
+.hero-cta {
+  margin-top: 35px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 1.3s forwards;
+}
+
+.hero-cta a {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 2px solid var(--accent-blue);
+  color: var(--accent-blue);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-blue);
+  transition: left var(--transition-base);
+  z-index: -1;
+}
+
+.hero-cta a:hover {
+  color: var(--bg-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.hero-cta a:hover::before {
+  left: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 2.8rem;
+  }
+
+  main h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 2.2rem;
+  }
+}

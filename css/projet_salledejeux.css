@@ -1,0 +1,69 @@
+/* ============================================================
+   PROJET_SALLEDEJEUX.CSS — Page Projet Salle de Jeux
+   ============================================================ */
+@import url('./global.css');
+
+/* === CONTENEUR === */
+.projet-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.projet-container p {
+  color: var(--text-muted);
+  text-align: justify;
+}
+
+/* === IMAGES === */
+.projet-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.projet-images img {
+  width: 70%;
+  max-width: 700px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.projet-images img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* === LISTE INFRASTRUCTURE === */
+.infra-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.infra-list li {
+  padding: 8px 0 8px 20px;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.infra-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+  .projet-images img {
+    width: 100%;
+  }
+}

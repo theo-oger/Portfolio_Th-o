@@ -1,0 +1,137 @@
+/* ============================================================
+   ROOT-ME_PAGES.CSS — Pages détail Root-Me (challenges)
+   ============================================================ */
+@import url('./global.css');
+
+/* === CONTENU PRINCIPAL === */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.veille-container {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+/* === ACCORDÉON === */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-toggle {
+  background: var(--bg-card);
+  color: var(--accent-blue);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 16px 24px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  outline: none;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-toggle::after {
+  content: '▾';
+  font-size: 1rem;
+  transition: transform var(--transition-base);
+  color: var(--text-dim);
+}
+
+.accordion-toggle.active::after {
+  transform: rotate(180deg);
+  color: var(--accent-blue);
+}
+
+.accordion-toggle:hover {
+  background: var(--bg-card-hover);
+}
+
+.accordion-toggle.active {
+  background: var(--bg-card-hover);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.accordion-content {
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  padding: 0 24px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.accordion-content p,
+.accordion-content ul,
+.accordion-content li {
+  margin: 10px 0;
+  color: var(--text-muted);
+}
+
+/* === BOUTON RETOUR === */
+.btn-retour {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  border: 2px solid var(--accent-yellow);
+  border-radius: var(--radius-sm);
+  color: var(--accent-yellow);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all var(--transition-base);
+}
+
+.btn-retour:hover {
+  background: var(--accent-yellow);
+  color: var(--bg-dark);
+  transform: translateX(-5px);
+}
+
+/* === CODE BLOCKS === */
+pre {
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 4px solid var(--accent-blue);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  text-align: left;
+}
+
+code {
+  font-family: var(--font-body);
+  color: var(--accent-yellow);
+  font-size: 0.9rem;
+  white-space: pre;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .veille-container {
+    margin: 40px 15px;
+  }
+
+  .accordion-toggle {
+    font-size: 0.95rem;
+  }
+
+  pre {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}

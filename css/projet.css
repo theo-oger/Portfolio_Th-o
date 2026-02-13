@@ -1,0 +1,129 @@
+/* ============================================================
+   PROJET.CSS — Page liste des Projets
+   ============================================================ */
+@import url('./global.css');
+
+/* === INTRO === */
+.intro-projets {
+  max-width: 800px;
+  margin: 70px auto 40px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.intro-projets h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.intro-projets p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* === CARTES PROJET === */
+.categorie {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.grid-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 10px 0;
+  justify-items: stretch;
+}
+
+.projet-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+  height: 100%;
+  position: relative;
+}
+
+.projet-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.projet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card);
+}
+
+.projet-card:hover::after {
+  opacity: 0.3;
+}
+
+.projet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-base);
+}
+
+.projet-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-text {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 150px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-text h3 {
+  color: var(--accent-blue);
+  margin: 0;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.card-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Tags technologiques */
+.card-text strong {
+  color: var(--accent-yellow);
+  font-size: 0.8rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .grid-projets {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro-projets {
+    margin: 50px 20px 30px;
+  }
+}
