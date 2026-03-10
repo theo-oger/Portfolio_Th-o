@@ -103,43 +103,48 @@
 
         <div class="article-card">
           <h4><a
-              href="https://www.techradar.com/pro/security/microsoft-fixes-one-of-its-highest-ever-rated-security-flaws-heres-what-happened"
-              target="_blank">Vulnérabilité critique dans ASP.NET Core (CVE-2025-55315)</a></h4>
-          <p><strong>Date :</strong> 12 octobre 2025</p>
-          <p><strong>Type d'attaque :</strong> HTTP Request Smuggling</p>
-          <p><strong>Impact :</strong> Compromission de données sensibles et modification de contenu sur le serveur
-            Kestrel d'ASP.NET Core.</p>
-          <p><strong>Solution :</strong> Mise à jour vers la version sécurisée d'ASP.NET Core.</p>
+              href="https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+              target="_blank">React2Shell : Faille RCE critique dans React Server Components (CVE-2025-55182)</a></h4>
+          <p><strong>Date :</strong> 3 décembre 2025</p>
+          <p><strong>Type d'attaque :</strong> Remote Code Execution (RCE) via désérialisation non sécurisée</p>
+          <p><strong>Impact :</strong> Vulnérabilité critique (CVSS 10.0) permettant l'exécution de code à distance
+            sans authentification dans React 19 et Next.js. Exploitation active par des groupes APT chinois quelques
+            heures après la divulgation.</p>
+          <p><strong>Solution :</strong> Mise à jour immédiate de React et Next.js vers les versions corrigées.
+            Déploiement de règles WAF de protection.</p>
           <p><strong>Source :</strong> <a
-              href="https://www.techradar.com/pro/security/microsoft-fixes-one-of-its-highest-ever-rated-security-flaws-heres-what-happened"
-              target="_blank">TechRadar</a></p>
+              href="https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+              target="_blank">React.dev (Blog officiel)</a></p>
         </div>
 
         <div class="article-card">
           <h4><a
-              href="https://interactiveonline.com/unauthenticated-stored-xss-vulnerability-patched-in-ultimate-member-wordpress-plugin/"
-              target="_blank">Exploitation XSS dans plusieurs plugins WordPress</a></h4>
-          <p><strong>Date :</strong> 5 octobre 2025</p>
-          <p><strong>Type d'attaque :</strong> Cross-Site Scripting (XSS)</p>
-          <p><strong>Impact :</strong> Injection de scripts malveillants pouvant compromettre les comptes utilisateurs
-            et exposer des données sensibles.</p>
-          <p><strong>Solution :</strong> Mise à jour immédiate des plugins concernés et désactivation des extensions non
-            sécurisées.</p>
+              href="https://thehackernews.com/2025/12/wordpress-king-addons-flaw-under-active.html"
+              target="_blank">Escalade de privilèges dans WordPress King Addons (CVE-2025-8489)</a></h4>
+          <p><strong>Date :</strong> 3 décembre 2025</p>
+          <p><strong>Type d'attaque :</strong> Privilege Escalation (élévation de privilèges)</p>
+          <p><strong>Impact :</strong> Vulnérabilité critique (CVSS 9.8) permettant la création de comptes
+            administrateurs sans authentification sur les sites utilisant le plugin Elementor King Addons.
+            Plus de 4 500 tentatives d'exploitation bloquées par Wordfence.</p>
+          <p><strong>Solution :</strong> Mise à jour immédiate du plugin King Addons et audit des comptes
+            administrateurs existants.</p>
           <p><strong>Source :</strong> <a
-              href="https://interactiveonline.com/unauthenticated-stored-xss-vulnerability-patched-in-ultimate-member-wordpress-plugin/"
-              target="_blank">Interactive Online</a></p>
+              href="https://thehackernews.com/2025/12/wordpress-king-addons-flaw-under-active.html"
+              target="_blank">The Hacker News</a></p>
         </div>
 
         <div class="article-card">
-          <h4><a href="https://www.ifourtechnolab.com/blog/owasp-vulnerability-sql-injection" target="_blank">Injection
-              SQL dans CMS Open Source</a></h4>
-          <p><strong>Date :</strong> 20 septembre 2025</p>
-          <p><strong>Type d'attaque :</strong> Injection SQL</p>
-          <p><strong>Impact :</strong> Accès non autorisé et modification de la base de données des CMS obsolètes.</p>
-          <p><strong>Solution :</strong> Mise à jour régulière du CMS, audit des extensions et utilisation de requêtes
-            préparées.</p>
-          <p><strong>Source :</strong> <a href="https://www.ifourtechnolab.com/blog/owasp-vulnerability-sql-injection"
-              target="_blank">iFour Technolab</a></p>
+          <h4><a href="https://gbhackers.com/owasp-top-10-2025-released/"
+              target="_blank">Publication du OWASP Top 10 2025 : nouvelles catégories de risques</a></h4>
+          <p><strong>Date :</strong> 6 novembre 2025</p>
+          <p><strong>Type d'attaque :</strong> Analyse des risques de sécurité web</p>
+          <p><strong>Impact :</strong> Le référentiel OWASP Top 10:2025 introduit deux nouvelles catégories :
+            « Software Supply Chain Failures » (A03) et « Mishandling of Exceptional Conditions » (A10).
+            Broken Access Control reste la menace n°1, et Security Misconfiguration monte en 2ᵉ position.</p>
+          <p><strong>Solution :</strong> Adapter les pratiques de développement et d'audit de sécurité
+            au nouveau référentiel OWASP 2025.</p>
+          <p><strong>Source :</strong> <a href="https://gbhackers.com/owasp-top-10-2025-released/"
+              target="_blank">GBHackers</a></p>
         </div>
 
       </div>
